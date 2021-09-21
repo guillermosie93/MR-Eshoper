@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react/cjs/react.development"
 import { CartContext } from "../context/cartContext"
@@ -19,7 +20,7 @@ return(
 
 export const CartElement = () => {
     const { carrito } = useContext(CartContext)
-    const {buttonClicked, setbuttonClicked} = useState(false)
+    const [buttonClicked, setbuttonClicked] = useState(false)
     const [productCart] = useState(
         {
         backgroundColor: '#ffe8d8',
@@ -80,11 +81,10 @@ export const CartElement = () => {
                     {itemProduct.length === 0 ? null : 
                     <>
                         {/* <FormCart/> */}
-                        <button>confirmar compra</button>
+                        <button onClick={confirm}>confirmar compra</button>
                         <br/>
                         <br/>
-
-                        <FormCart/>
+                        {buttonClicked && <FormCart/>}
 
 {/*                         {buttonClicked === true ? <FormCart/>: null}
  */}                    </>}

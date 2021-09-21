@@ -49,16 +49,17 @@ export const ProductList = () => {
  
     const productId = product.find(x => x.key == id)
     console.log(productId);
-    const {nombre ,image, precio, category} = productId
 
 
     console.log(productId);
     return(
+        <>
         <div>
-             <h1>producto: {nombre}</h1>
-            <img src={image}/>
-            <h2>precio: ${precio}</h2>
-            <h6>{category}</h6>
+                <h1>producto: {productId.nombre}</h1>
+                <img src={productId.image}/>
+                <h2>precio: ${productId.precio}</h2>
+                <h6>{productId.category}</h6>
         </div>
+        </>
     )
 }
