@@ -25,8 +25,9 @@ export const Counter = (props) =>{
     }})
     const articulo = props.props //viene del param
 
-    const {carrito: item, addCarrito} =useContext(CartContext)//contexto para el carrito
+    const {carrito: item, addCarrito} = useContext(CartContext)//contexto para el carrito
 
+    console.log(props.props);
 
     function countCant(e){// funcion controladora de los botones del Counter
        const  signCount = e.target.value

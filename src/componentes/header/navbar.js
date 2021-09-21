@@ -28,7 +28,7 @@ export const NavBar__component = () =>{
             <div className='menu' style={style__padre.styler}>
                 <ul style={style__UL.styler}>
                     <li key='home'><Link to='/'>HOME</Link></li>
-                    {category.map(x => <li key={x.id} ><Link to={`/categoria/${x.id}`} style={style__LI.styler}><b>{x.nombre}</b></Link></li>)}
+                    {category.map(x => <li key={x.id} ><Link to={`/category/${x.id}`} style={style__LI.styler}><b>{x.nombre}</b></Link></li>)}
                     <Link to={'/cart'}>ir al carrito</Link>
                 </ul>
             </div>

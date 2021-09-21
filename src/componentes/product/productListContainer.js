@@ -13,7 +13,6 @@ export const getCategory = (categoryId) => {
         }, 1000)
     })
 }
-console.log(45)
 
 export default function ListProduct() {
     

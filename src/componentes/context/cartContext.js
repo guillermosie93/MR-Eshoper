@@ -7,8 +7,11 @@ export const CartProvider= (props)=>{
     const [carrito, setCarrito] = useState([])
 
     const addCarrito = (item, cantidad) =>{
+        console.log(item);
         setCarrito([...carrito, {item, cantidad}])
     }
+
+    console.log(carrito);
 
     return (
         <CartContext.Provider value ={{ carrito, addCarrito }}>
